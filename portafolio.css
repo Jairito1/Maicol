@@ -1,74 +1,161 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
+/* Estilo general del cuerpo */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif; /* Fuente por defecto */
+  background: linear-gradient(135deg, #4a4a4a, #2c2c2c); /* Colores sobrios */
+  color: #e0e0e0; /* Color de texto más suave */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 15px;
+  box-sizing: border-box;
 }
 
-
+/* Imagen con sombra y efecto hover */
 img {
-    border-radius: 60%;
-    margin: 20px auto;
-    display: block;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Sombra más pronunciada */
+  transition: transform 0.3s ease;
+  display: block;
 }
 
+img:hover {
+  transform: scale(1.05);
+}
 
+/* Nombre principal */
+h1 {
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8); /* Sombra más oscura */
+}
+
+/* Header principal */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
 }
 
 header h1 {
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #f0f0f0; /* Color más suave */
 }
 
-
+/* Navegación */
 nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #d0d0d0; /* Color de texto más suave */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  background-color: #f0f0f0; /* Color de fondo más claro */
+  color: #2c2c2c; /* Color de texto más oscuro */
 }
 
+/* Secciones generales */
 section {
-    background: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo más oscuro */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 25px 30px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra más oscura */
+  color: #e0e0e0; /* Color de texto más suave */
+  transition: box-shadow 0.3s ease;
 }
 
+section:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5); /* Sombra más pronunciada al pasar el mouse */
+}
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Títulos de secciones */
+section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #f0f0f0; /* Color más suave */
+  text-align: center;
+}
+
+/* Párrafos */
+section p {
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #d0d0d0; /* Color de texto más suave */
+  text-align: justify;
+}
+
+/* Contacto: enlaces y mejor presentación */
+#contact p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+#contact p br {
+  content: "";
+  margin-bottom: 8px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  section h2 {
+    font-size: 1.75rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
 }
