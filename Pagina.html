@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica', Arial, sans-serif;
+      color: #fff;
+      background: #fff;
+      font-weight: normal;
+    }
+    .header {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #FF1493, #FF69B4);
+    }
+    .header img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+      z-index: 0;
+      filter: brightness(0.7) blur(0.5px);
+    }
+    .header h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      font-size: 5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      color: #fff;
+      letter-spacing: 4px;
+      text-shadow: 0 4px 24px #000, 0 1px 0 #FF69B4;
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+    }
+    .section {
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .section h2 {
+      font-size: 1.2em;
+      color: #C71585;
+      margin: 5px 0;
+      font-weight: normal;
+    }
+    .section p {
+      color: #333;
+      font-size: 0.7em;
+      line-height: 1.5;
+      margin: 0 0 15px;
+    }
+    .section img {
+      max-width: 40%;
+      height: auto;
+      margin: 0 10px;
+      border: none;
+    }
+    .section .text-content {
+      max-width: 50%;
+      padding: 0 10px;
+      text-align: center;
+    }
+    .section.full-image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .section.full-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/raptis.png') no-repeat center center;
+      background-size: cover;
+      opacity: 0.7;
+      z-index: 0;
+      filter: brightness(0.7) blur(0.5px);
+    }
+    .section.full-image .text-content {
+      position: absolute;
+      z-index: 1;
+      width: 50%;
+      right: 0;
+      text-align: left;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    .section.full-image .text-content h2 {
+      color: #fff;
+      margin: 5px 0;
+    }
+    .section.full-image .text-content p {
+      color: #fff;
+      margin: 0 0 15px;
+    }
+    .section.full-image .text-content .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FF69B4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 0.9em;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+    .section.full-image .overlay-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 30%;
+      opacity: 0.8;
+      z-index: 1;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FF69B4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+    .footer {
+      background: linear-gradient(to left, #fd5160, rgba(252,77,92,1));
+      padding: 20px;
+      text-align: center;
+}
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+      font-size: 0.9em;
+    }
+    .footer p {
+      font-size: 0.8em;
+      margin: 10px 0 0;
+    }
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 2em;
+      }
+      .section.full-image .text-content {
+        padding: 10px;
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="images/angel.jpg" alt="Header Image">
+    <h1>MUSIC</h1>
+  </div>
+  <div class="section">
+    <div class="text-content">
+      <h2>MUSIC.</h2>
+      <h2>FUN.</h2>
+      <h2>ENTERTAINMENT.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="btn">GO THERE</a>
+    </div>
+    <img src="images/palmer.png" alt="Performer with sparks">
+  </div>
+  <div class="section">
+    <img src="images/wesley.png" alt="Singer on stage">
+    <div class="text-content">
+      <h2>LOUDER.</h2>
+      <h2>LIKE IT WAS NEVER BEEN BETTER.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="btn">GO THERE</a>
+    </div>
+  </div>
+  <div class="section full-image">
+    <div class="text-content">
+      <h2>SOUND VIBES</h2>
+      <h2>WITH COLORS.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#" class="btn">GO HERE</a>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="#">Ahora lo hago</a>
+  </div>
+</body>
+</html>
