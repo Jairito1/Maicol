@@ -30,22 +30,38 @@
       filter: brightness(0.7) blur(0.5px);
     }
     .header h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      font-size: 5em;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
-      color: #fff;
-      letter-spacing: 4px;
-      text-shadow: 0 4px 24px #000, 0 1px 0 #FF69B4;
-      width: 100%;
-      text-align: center;
-      line-height: 1;
-    }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 7em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  letter-spacing: 4px;
+  text-shadow: 0 4px 24px #000;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+}
+.multicolor-text {
+  background: linear-gradient(to right, #fd5160, #fc2134);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.header .multicolor-text {
+  background: none;
+  color: #fff;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  font-weight: normal;
+}
     .section {
       padding: 20px;
       text-align: center;
@@ -55,16 +71,18 @@
       justify-content: space-around;
     }
     .section h2 {
-      font-size: 1.2em;
-      color: #C71585;
+      font-size: 1em;
+      color: #000000;
       margin: 5px 0;
-      font-weight: normal;
+      font-weight: bold;
+      text-align: left;
     }
     .section p {
       color: #333;
-      font-size: 0.7em;
+      font-size: 0.4em;
       line-height: 1.5;
       margin: 0 0 15px;
+      text-align: left;
     }
     .section img {
       max-width: 40%;
@@ -72,11 +90,16 @@
       margin: 0 10px;
       border: none;
     }
-    .section .text-content {
-      max-width: 50%;
-      padding: 0 10px;
-      text-align: center;
-    }
+.section .text-content {
+  max-width: 50%;
+  padding: 0 10px;
+  text-align: left;
+}
+.section:nth-of-type(1) .text-content,
+.section:nth-of-type(2) .text-content {
+  max-width: 25%;
+}
+
     .section.full-image {
       position: relative;
       height: 200px;
@@ -112,22 +135,13 @@
     .section.full-image .text-content h2 {
       color: #fff;
       margin: 5px 0;
+      font-weight: bold;
     }
     .section.full-image .text-content p {
       color: #fff;
       margin: 0 0 15px;
     }
-    .section.full-image .text-content .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #FF69B4;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 20px;
-      font-size: 0.9em;
-      margin-top: 10px;
-      margin-left: 0;
-    }
+    
     .section.full-image .overlay-img {
       position: absolute;
       top: 50%;
@@ -138,27 +152,25 @@
       z-index: 1;
     }
     .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #FF69B4;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 20px;
-      font-size: 0.9em;
-      margin-top: 10px;
-    }
+  display: inline-block;
+  font-size: 0.25em;
+  padding: 4px 12px;
+  background-color: #fd5160;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 32px;
+  margin-top: 8px;
+  margin-left: 0;
+  text-align: left;
+}
+    
     .footer {
-      background: linear-gradient(to left, #fd5160, rgba(252,77,92,1));
+      background: linear-gradient(to right, #fd5160, rgba(252,77,92,1));
       padding: 20px;
       text-align: center;
 }
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      display: block;
-      margin: 5px 0;
-      font-size: 0.9em;
-    }
+ 
+
     .footer p {
       font-size: 0.8em;
       margin: 10px 0 0;
@@ -177,11 +189,11 @@
 <body>
   <div class="header">
     <img src="images/angel.jpg" alt="Header Image">
-    <h1>MUSIC</h1>
+    <h1><span class="multicolor-text">MUSIC</span></h1>
   </div>
   <div class="section">
     <div class="text-content">
-      <h2>MUSIC.</h2>
+      <h2><span class="multicolor-text">MUSIC.</span></h2>
       <h2>FUN.</h2>
       <h2>ENTERTAINMENT.</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -192,7 +204,7 @@
   <div class="section">
     <img src="images/wesley.png" alt="Singer on stage">
     <div class="text-content">
-      <h2>LOUDER.</h2>
+      <h2><span class="multicolor-text">LOUDER.</span></h2>
       <h2>LIKE IT WAS NEVER BEEN BETTER.</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <a href="#" class="btn">GO THERE</a>
@@ -203,11 +215,11 @@
       <h2>SOUND VIBES</h2>
       <h2>WITH COLORS.</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="#" class="btn">GO HERE</a>
+      <a href="#" class="btn">GO THERE</a>
     </div>
   </div>
   <div class="footer">
-    <a href="#">Ahora lo hago</a>
-  </div>
+  <a href="#" class="btn">Ahora lo hago</a>
+</div>
 </body>
 </html>
